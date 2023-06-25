@@ -5,8 +5,8 @@ import MealItem from "./MealItem/MealItem";
 const DUMMY_MEALS = [
     {
         id: 'm1',
-        name: 'Sushi',
-        description: 'Finest fish and veggies',
+        name: 'Ugali Matumbo',
+        description: 'Finest ugali and matumbo',
         price: 22.99,
     },
     {
@@ -29,14 +29,15 @@ const DUMMY_MEALS = [
     },
 ];
 const AvailableMeals = () => {
-    const mealList = DUMMY_MEALS.map(meal=>
-             <MealItem
-                key={meal.id}
-                name={meal.name}
-                price={meal.price}
-                description={meal.description}
-            />
-        )
+    const mealList = DUMMY_MEALS.map(meal =>
+        <MealItem
+            id={meal.id}
+            key={meal.id}
+            name={meal.name}
+            price={meal.price}
+            description={meal.description}
+        />
+    )
     return <section className={classes.meals}>
         <Card>
             <ul>
